@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kanto Region Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>地積（平方メートル）  </h2>
+    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="100">
+	<h2>構造</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bhk-1" name="uiKouzou" value="w"/>
+		<label for="radio-bhk-1">w</label>
+		<input type="radio" id="radio-bhk-2" name="uiKouzou" value="rc" checked/>
+		<label for="radio-bhk-2">rc</label>
+		<input type="radio" id="radio-bhk-3" name="uiKouzou" value="c"/>
+		<label for="radio-bhk-3">c</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>標準地の利用の現況 </h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiUsing" value="0"/>
+		<label for="radio-bath-1">住宅</label>
+		<input type="radio" id="radio-bath-2" name="uiUsing" value="1" checked/>
+		<label for="radio-bath-2">共同住宅</label>
+	</div>
+		<h2>所在地</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option>Electronic City</option>
+        <option>Rajaji Nagar</option>
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">推定</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+	<button class="submit" type="button">平方メートル当たりの価格</button>
+	<div id="uiPricePerSqft" class="result"> <h2></h2> </div>
+	
+</body>
+</html>
